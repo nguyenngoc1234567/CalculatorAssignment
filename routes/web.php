@@ -12,10 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::post('/check-email', [UserController::class, 'validationEmail'])->name('checkEmail');
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('bai_tap', function () {
     return view('bai_tap');
 });
